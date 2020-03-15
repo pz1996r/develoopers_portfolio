@@ -1,0 +1,16 @@
+export const colors = {
+    superWhite: '#FFFFFF',
+    white: '#edf1fd',
+    black: 'black',
+    purple: '#5851e8',
+    purpleBtn: '#5851e814',
+    purpleBtnHov: '#5851e87a',
+    navGray: '#3e4455',
+    mainGray: '#374457',
+    mobileNav: '#282569',
+    seaColor: '#84E8E8',
+    seaColorBtn: '#84e8e838',
+    seaColorBtnHov: '#84e8e870',
+    lightGray: '#aeaeae',
+    red: 'red',
+}
