@@ -154,6 +154,9 @@ export const Btn = styled(Button)`
     ${anim};
     transform: translate(0,20px);
     opacity: 0; 
+    @media (min-width: 640px){
+        font-weight:500;
+    }
 `;
 
 const Introduction = (props) => (

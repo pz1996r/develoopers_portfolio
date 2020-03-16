@@ -137,6 +137,7 @@ const P = styled.p`
     @media (min-width: 640px){
         font-size: 1.25rem;
         margin: 0 20px;
+        font-weight: 500;
     }
 `;
 
