@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { theme } from '../utils/theme'
+import { Helmet } from "react-helmet"
 
 const GlobalStyle = createGlobalStyle`
 /* @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap'); */
@@ -49,6 +50,9 @@ const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
+      <Helmet>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap&subset=latin-ext" rel="stylesheet" />
+      </Helmet>
       <StyledWrapper>
         {children}
       </StyledWrapper>
