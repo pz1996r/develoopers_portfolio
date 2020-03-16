@@ -20,7 +20,12 @@ const FlexContainer = styled.div`
     }
 `;
 
-const AboutContainer = styled.div``;
+const AboutContainer = styled.div`
+    font-weight:300;
+    @media (min-width: 640px){
+        font-weight:400;
+    }
+`;
 
 
 const ParagrafContainer = styled.div`

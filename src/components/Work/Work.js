@@ -64,9 +64,9 @@ const ProjectTitle = styled.h5`
 `;
 
 const ProjectDescription = styled.p`
-    font-weight: 300;
     padding: 18px 0px;
     color: ${({ theme }) => theme.colors.white};
+    font-weight: 300;
 `;
 
 const Technologies = styled.ul`
@@ -78,6 +78,7 @@ const Technology = styled.li`
     color: ${({ theme }) => theme.colors.lightGray};
     font-weight: .8rem;
     padding: 3px 6px;
+    font-weight: 300;
 `;
 
 const FlexContainer = styled.div`

@@ -130,10 +130,12 @@ export const Desc = styled.div`
     ${anim};
     margin-bottom: 20px;
     max-width: 500px;
-    font-weight:300;
     transform: translate(0,20px);
     opacity: 0;
-
+    font-weight:300;
+    @media (min-width: 640px){
+        font-weight:400;
+    }
     @media (min-width: 1024px){
         margin-top: 40px;
     }
