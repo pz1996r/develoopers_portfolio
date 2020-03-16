@@ -104,7 +104,8 @@ export const H2 = styled.h2`
     color: ${({ theme }) => theme.colors.purple};
     transform: translate(0,20px);
     opacity: 0.05;
-
+    /* montserrat letter spacing */
+    letter-spacing: -4px;
     @media (min-width: 1024px){
         margin-bottom: 20px;
     }
@@ -118,6 +119,8 @@ export const H1 = styled.h1`
     color: ${({ theme }) => theme.colors.mainGray};
     transform: translate(0,20px);
     opacity: 0.05;
+    /* montserrat letter spacing */
+    letter-spacing: -4px;
 
     @media (min-width: 1024px){
         margin-bottom: 20px;
