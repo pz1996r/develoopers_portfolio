@@ -4,13 +4,6 @@ import SectionTitle from "../SectionCommonComponents/SectionTitle";
 import Section from "../SectionCommonComponents/SectionContainer";
 import { Btn } from '../Main-home/Introduction';
 
-// const Button = styled(Btn)`
-//     padding: 6px 10px;
-//     margin-right: 30px;
-//     @media (min-width: 1024px){
-//         margin-right: 20px;
-//     }
-// `;
 
 const ContactSection = styled(Section)`
     text-align:center;
@@ -33,6 +26,10 @@ const ContactP = styled.p`
     max-width:530px;
     margin: 50px auto;
     text-align: center;
+    font-weight:300;
+    @media (min-width: 640px){
+        font-weight:400;
+    }
 `;
 
 const ContactComponent = ({ title, paragraf, button }) => (

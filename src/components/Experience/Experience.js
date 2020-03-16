@@ -93,6 +93,10 @@ const H6 = styled.h6`
 `;
 const DutyList = styled.ul`
     padding-top:14px;
+    font-weight:300;
+    @media (min-width: 640px){
+        font-weight:400;
+    }
 `;
 const ProjectLink = styled(Link)`
     white-space: nowrap;

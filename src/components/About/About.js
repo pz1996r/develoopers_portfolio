@@ -35,7 +35,11 @@ const ParagrafContainer = styled.div`
 `;
 
 
-const SkillsContainer = styled.ul``;
+const SkillsContainer = styled.ul`
+        /* wyróżnienie  */
+        font-weight:400;
+`;
+
 
 const Skill = styled(SectionLi)`
     width: 50%;
