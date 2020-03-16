@@ -47,7 +47,7 @@ const windowGlobal = typeof window !== 'undefined' ? window : { localStorage: { 
 
 class IndexPage extends React.Component {
   state = {
-    lang: windowGlobal.localStorage['lang'] || 'ENG',
+    lang: 'ENG',
   }
   changeLang = (lang) => {
     document.getElementById('content').style.display = 'none';
@@ -57,6 +57,11 @@ class IndexPage extends React.Component {
     })
     setTimeout(() => { document.getElementById('content').style.display = 'block'; }, 1);
     localStorage['lang'] = lang;
+  }
+  componentDidMount() {
+    this.setState({
+      lang: windowGlobal.localStorage['lang'] || 'ENG',
+    })
   }
 
   render() {
@@ -73,7 +78,7 @@ class IndexPage extends React.Component {
           <List noMobile>
             {NavValues.map((item) => {
               delay += 100;
-              return (<Li key={delay} delay={delay} onClick={this.changeLang.bind(null, item.content)}><item.tag active={item.content == this.state.lang}>{item.content + this.state.lang}</item.tag></Li>)
+              return (<Li key={delay} delay={delay} onClick={this.changeLang.bind(null, item.content)}><item.tag active={item.content == this.state.lang}>{item.content}</item.tag></Li>)
             })}
           </List>
         </Navigation>
