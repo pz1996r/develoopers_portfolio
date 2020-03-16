@@ -80,6 +80,9 @@ export const H3 = styled.h3`
     transform: translate(0,20px);
     opacity: 0;
     font-weight:400;
+    @media (min-width: 640px){
+        font-weight:600;
+    }
     &::before{
         position: absolute;
         top: 10px;
@@ -139,7 +142,7 @@ export const Desc = styled.div`
     opacity: 0;
     font-weight:300;
     @media (min-width: 640px){
-        font-weight:400;
+        font-weight:500;
     }
     @media (min-width: 1024px){
         margin-top: 40px;

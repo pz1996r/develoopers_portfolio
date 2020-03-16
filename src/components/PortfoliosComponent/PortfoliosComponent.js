@@ -19,6 +19,9 @@ export const Button = styled(Btn)`
     margin-left: 20px;
     transition: .3s linear;
     &:focus {outline:0 !important}
+    @media (min-width: 640px){
+        font-weight:500;
+    }
     @media (min-width: 1024px){
         margin-right: 20px;
     }
