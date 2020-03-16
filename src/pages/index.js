@@ -51,6 +51,7 @@ class IndexPage extends React.Component {
   }
   changeLang = (lang) => {
     document.getElementById('content').style.display = 'none';
+    console.log(lang);
     this.setState({
       lang
     })
@@ -72,7 +73,7 @@ class IndexPage extends React.Component {
           <List noMobile>
             {NavValues.map((item) => {
               delay += 100;
-              return (<Li key={delay} delay={delay} onClick={this.changeLang.bind(null, item.content)}><item.tag active={item.content === this.state.lang ? true : false}>{item.content}</item.tag></Li>)
+              return (<Li key={delay} delay={delay} onClick={this.changeLang.bind(null, item.content)}><item.tag active={item.content === this.state.lang ? true : false}>{item.content + this.state.lang}</item.tag></Li>)
             })}
           </List>
         </Navigation>
