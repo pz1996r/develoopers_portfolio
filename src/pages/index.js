@@ -78,7 +78,7 @@ class IndexPage extends React.Component {
           <List noMobile>
             {NavValues.map((item) => {
               delay += 100;
-              return (<Li key={delay} delay={delay} onClick={this.changeLang.bind(null, item.content)}><item.tag active={item.content == this.state.lang}>{item.content}</item.tag></Li>)
+              return (<Li key={delay} delay={delay} onClick={this.changeLang.bind(null, item.content)}><item.tag active={item.content === this.state.lang}>{item.content}</item.tag></Li>)
             })}
           </List>
         </Navigation>

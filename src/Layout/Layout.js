@@ -14,7 +14,7 @@ ul{
   list-style:none;
 }
 html{
-  overflow:hidden;
+  overflow-x:hidden;
   font-size:19px;
   scroll-behavior: smooth;
   @media (max-width: 320px) {
@@ -34,7 +34,6 @@ html{
     /* min-height:100vh; */
     /* font-family: 'Questrial', sans-serif; */
     width:100vw;
-    overflow:hidden;
     transition: background-color .2s linear;
     padding:0;
     margin:0;
