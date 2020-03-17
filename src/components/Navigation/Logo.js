@@ -13,8 +13,8 @@ export const ImgWrapper = styled.div`
 `;
 
 export const LogoImg = styled.img`
-    animation: opacityContaier 1500ms forwards;
-    animation-delay: 800ms;
+    animation: 1500ms ease 800ms 1 normal forwards running opacityContaier;
+    opacity:0;
       @keyframes opacityContaier{
         0%{
             opacity: 0; 
