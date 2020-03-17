@@ -57,7 +57,7 @@ const WorkValues = {
             technologies: ['PHP', 'JavaScript', 'HTML', 'CSS', '.htaccess',]
         },
         {
-            githubLink: "https://www.douzupelnianeia.ed",
+            githubLink: null,
             visitLink: "https://develoopers.com",
             title: "Portfolio",
             description: "Develoopers is my first website created in Gatsby. During that project I have learnt a lot new stuff like Styled Components, GraphQL, Gatsby Image and that's why I don't regret choosing a new technology that was completely new to me.",
@@ -71,17 +71,10 @@ const WorkValues = {
             technologies: ['JavaScript', 'Webpack', 'SCSS', 'Web Speech API', 'External API']
         },
         {
-            githubLink: "https://www.douzupelnianeia.ed",
-            visitLink: "https://www.douzupelnianeia.ed",
-            title: "Tetris",
-            description: "This project I created for a AI classes. The main goal is to find the shortest path through all points on the coordinate system.",
-            technologies: ['JavaScript', 'Canvas', 'CSS', 'HTML']
-        },
-        {
-            githubLink: "https://www.douzupelnianeia.ed",
-            visitLink: "https://www.douzupelnianeia.ed",
+            githubLink: "https://github.com/pz1996r/The-shortest-path-algorithms",
+            visitLink: "https://pz1996r.github.io/The-shortest-path-algorithms/",
             title: "The shortest path algorithms",
-            description: "R Project for my Data Science class at Northeastern to analyze the top Spotify tracks of 2017 and their audio features.",
+            description: "Project for my artificial inteligence class to find the shortes path. User can draw or enter points on the coordinate axis that the algorithm will analyze to find the shortest path using two algorithms.",
             technologies: ['JavaScript', 'Canvas', 'CSS', 'HTML']
         },
         {
@@ -90,6 +83,13 @@ const WorkValues = {
             title: "Fridge App",
             description: "This project is currently being improved and expanded. Fridge application is used to manage products and recipes. With this application you can indicate what you fancy, and it will suggest you what you should buy. ",
             technologies: ['React', 'Node', 'Express', 'MongoDB']
+        },
+        {
+            githubLink: "https://www.douzupelnianeia.ed",
+            visitLink: "https://www.douzupelnianeia.ed",
+            title: "Tetris",
+            description: "This project I created for a AI classes. The main goal is to find the shortest path through all points on the coordinate system.",
+            technologies: ['JavaScript', 'Canvas', 'CSS', 'HTML']
         },
     ]
 }
