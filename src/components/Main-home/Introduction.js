@@ -36,7 +36,7 @@ const anim = css`
 
 @keyframes show{
     0%{
-        transform: translate(0,90px);
+        transform: translate(0,80px);
         opacity: 0; 
     }
     /* 20%{
