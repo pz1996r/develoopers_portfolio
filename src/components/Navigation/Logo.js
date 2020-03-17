@@ -13,6 +13,7 @@ export const ImgWrapper = styled.div`
 `;
 
 export const LogoImg = styled.img`
+    transition: 1200ms;
     animation: opacityContaier 1200ms forwards;
       @keyframes opacityContaier{
         0%{
