@@ -31,7 +31,7 @@ const anim = css`
     animation: ${({ delay }) => delay ? `show 400ms forwards ${(delay[1] + 700)}ms` : 'show 200ms forwards'};
 
     @media (min-width: 640px){
-        animation: show 250ms forwards ${({ delay }) => delay ? `${delay[0]}ms` : null};
+        animation: show 250ms forwards ${({ delay }) => delay ? `${(delay[0] + 300)}ms` : null};
     }
 
 @keyframes show{
