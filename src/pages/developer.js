@@ -151,7 +151,7 @@ class DeveloperPage extends React.Component {
                 <Helmet>
                     <meta charSet="utf-8" />
                     <title>Develoopers Piotr Zachoszcz</title>
-                    <link rel="canonical" href="http://develoopers.pl/developer" />
+                    <link rel="canonical" href="https://develoopers.pl/developer" />
                 </Helmet>
                 <Navigation>
                     <List>

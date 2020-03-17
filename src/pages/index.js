@@ -72,7 +72,7 @@ class IndexPage extends React.Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>Develoopers</title>
-          <link rel="canonical" href="http://develoopers.pl/" />
+          <link rel="canonical" href="https://develoopers.pl/" />
         </Helmet>
         <Navigation>
           <List noMobile>

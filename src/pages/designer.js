@@ -65,7 +65,7 @@ class DeveloperPage extends React.Component {
                 <Helmet>
                     <meta charSet="utf-8" />
                     <title>Develoopers Anna Green</title>
-                    <link rel="canonical" href="http://develoopers.pl/designer" />
+                    <link rel="canonical" href="https://develoopers.pl/designer" />
                 </Helmet>
                 <Navigation>
                     <List>
