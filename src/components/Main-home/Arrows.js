@@ -89,7 +89,7 @@ const ArrowRight = styled(AniLink)`
 
 const Container = styled.div`
     /*animacja strzałek  */
-    animation: arrows 350ms forwards 1000ms;
+    animation: arrows 350ms forwards 1400ms;
     width: 250px;
     opacity: 0;
     margin: 20px auto 0 auto;
@@ -119,7 +119,7 @@ const Container = styled.div`
     width: 100%;
     @keyframes arrows{
         0% {
-            transform: translate(0, 20px);
+            transform: translate(0, 80px);
             opacity: 0;
         }
         100% {
