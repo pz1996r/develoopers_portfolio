@@ -23,7 +23,7 @@ const Navigation = (props) => (
   <Nav>
     <ImgWrapper>
       <Link to="/">
-        <LogoImg src={logo} alt="Develoopers logo" />
+        <LogoImg src={logo} alt="Develoopers logo" onLoad={() => { console.log('załadowano obrazek') }} />
       </Link>
     </ImgWrapper>
     {props.children}
