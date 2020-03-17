@@ -169,7 +169,7 @@ class DeveloperPage extends React.Component {
                     <Main onScroll={this.scrollFun}>
                         <MainHome delay={[delay, mobileDelay]}>
                             {MaineHomeValues.map((item) => {
-                                delay += 100;
+                                delay += 150;
                                 // mobileDelay += 100;
                                 mobileDelay += 150;
                                 return (<item.tag key={[delay, mobileDelay]} delay={[delay, mobileDelay]} href={item.href ? item.href : null}>{this.state.lang === 'ENG' ? item.content : item.PLcontent}</item.tag>)
