@@ -156,7 +156,7 @@ class DeveloperPage extends React.Component {
                 <Navigation>
                     <List>
                         {NavValues.map((item) => {
-                            delay += 100;
+                            delay += 150;
                             if (item.type === 'btn') {
                                 return (<Li key={delay} delay={delay}><item.tag fun={() => scrollTo(item.href)}>{item.content}</item.tag></Li>)
                             }

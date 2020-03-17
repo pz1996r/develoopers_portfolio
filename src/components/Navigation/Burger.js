@@ -21,7 +21,7 @@ const Hamburger = styled.div`
       display: none;
   }
   /* animowanie */
-  animation: 1500ms ease normal forwards running opacityContaier;
+  animation: 1900ms ease normal forwards running opacityContaier;
     opacity:0;
       @keyframes opacityContaier{
         0%{

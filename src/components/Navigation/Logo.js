@@ -17,7 +17,7 @@ export const ImgWrapper = styled.div`
 `;
 
 export const LogoImg = styled.img`
-    animation: 1200ms ease 600ms normal forwards running opacityContaier;
+    animation: 1500ms ease 800ms normal forwards running opacityContaier;
     opacity:0;
       @keyframes opacityContaier{
         0%{

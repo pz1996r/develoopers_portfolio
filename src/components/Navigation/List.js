@@ -36,7 +36,7 @@ const LiDefault = styled.li`
 export const Li = styled(LiDefault)`
     transform: translate(0, -40px);
     opacity: 0;
-    animation: show-li 200ms forwards;
+    animation: show-li 250ms forwards;
     animation-delay: ${({ delay }) => delay ? `${delay}ms` : null};
     & a{
       padding: 10px 20px;
