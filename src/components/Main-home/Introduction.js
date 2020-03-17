@@ -25,7 +25,10 @@ const responsiveBigText = css`
 `;
 
 const anim = css`
-    animation: show 250ms forwards ${({ delay }) => delay ? `${delay[1]}ms` : null};
+    /* animation: show 250ms forwards ${({ delay }) => delay ? `${delay[1]}ms` : null}; */
+    /*  */
+    /* animation: ${({ delay }) => delay ? `show 350ms forwards ${delay[1]}ms` : 'show 350ms forwards'}; */
+    animation: ${({ delay }) => delay ? `show 400ms forwards ${(delay[1] + 700)}ms` : 'show 200ms forwards'};
 
     @media (min-width: 640px){
         animation: show 250ms forwards ${({ delay }) => delay ? `${delay[0]}ms` : null};
@@ -33,16 +36,16 @@ const anim = css`
 
 @keyframes show{
     0%{
-        transform: translate(0,20px);
+        transform: translate(0,90px);
         opacity: 0; 
     }
-    20%{
-        transform: translate(0,20px);
+    /* 20%{
+        transform: translate(0,30px);
         opacity: 0.2;  
-    }
-    80%{
+    } */
+    /* 80%{
         opacity: 1;  
-    }
+    } */
     100%{
         transform: translate(0,0);
         opacity: 1;
@@ -53,7 +56,11 @@ const Intro = styled.div`
     opacity: 0;
     position: relative;
     margin: auto 0;
-    animation: opacityContaier 50ms forwards ${({ delay }) => delay ? `${delay[1]}ms` : null};
+    /* animation: opacityContaier 50ms forwards ${({ delay }) => delay ? `${delay[1]}ms` : null}; */
+    /*  */
+    /* animation: ${({ delay }) => delay ? `opacityContaier 250ms forwards ${delay[1]}ms` : 'opacityContaier 50ms forwards'}; */
+    animation: ${({ delay }) => delay ? `opacityContaier 50ms forwards ${(delay[1] + 0)}ms` : 'opacityContaier 50ms forwards'};
+    /* animation: ${({ delay }) => delay ? `opacityContaier 50ms forwards ${(delay[1] + 0)}ms` : 'opacityContaier 50ms forwards'}; */
 
     @media (min-width: 640px){
         animation: show 250ms forwards ${({ delay }) => delay ? `${delay[0]}ms` : null};
@@ -106,7 +113,8 @@ export const H2 = styled.h2`
     font-weight:600;
     color: ${({ theme }) => theme.colors.purple};
     transform: translate(0,20px);
-    opacity: 0.05;
+    /* opacity: 0.05; */
+    opacity:0;
     /* montserrat letter spacing */
     letter-spacing: -2px !important;
     @media (min-width: 1024px){
@@ -122,7 +130,8 @@ export const H1 = styled.h1`
     font-weight:600;
     color: ${({ theme }) => theme.colors.mainGray};
     transform: translate(0,20px);
-    opacity: 0.05;
+    /* opacity: 0.05; */
+    opacity:0;
     /* montserrat letter spacing */
     letter-spacing: -2px !important;
 

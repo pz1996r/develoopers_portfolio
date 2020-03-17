@@ -20,6 +20,18 @@ const Hamburger = styled.div`
   @media(min-width:640px){
       display: none;
   }
+  /* animowanie */
+  animation: 1500ms ease normal forwards running opacityContaier;
+    opacity:0;
+      @keyframes opacityContaier{
+        0%{
+            opacity: 0; 
+         }
+          100%{
+            opacity: 1;
+         }
+      }
+
 `;
 
 const HamburgerBox = styled.span`
