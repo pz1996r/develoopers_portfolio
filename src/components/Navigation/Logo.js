@@ -5,9 +5,10 @@ export const ImgWrapper = styled.div`
     margin-left: 30px;
     width: 2.2rem;
     @media (min-width: 340px){
-      width: 3rem;
+      width: 2.5rem;
     }
     @media (min-width: 1024px){
+      width: 3rem;
       margin-left: 40px;
     }
 `;

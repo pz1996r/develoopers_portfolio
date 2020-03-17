@@ -92,7 +92,7 @@ const WorkComponent = ({ title, projects }) => (
     <Section id="Work">
         <SectionTitle beforeValue={title.nummber}>{title.value}</SectionTitle>
         <FlexContainer>
-            {projects.map(project => <Project key={project.title} data-sal="slide-up" data-sal-delay="50" data-sal-duration="600" data-sal-easing="ease">
+            {projects.map(project => <Project key={project.title}>
                 <IconsWrapper>
                     <FolderImage src={FolderIMG} alt="Folder ICON" />
                     {project.githubLink ? <Icon href={project.githubLink} image={GitHubIMG} activeImage={ActiveGitHubIMG}></Icon> : null}
