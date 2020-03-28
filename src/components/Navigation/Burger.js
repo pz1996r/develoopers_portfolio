@@ -36,16 +36,14 @@ const Hamburger = styled.div`
 
 const HamburgerBox = styled.span`
   width:30px;
-  /* width: 35px; */
   height: 24px;
-  /* height:35px; */
   display: inline-block;
   position: relative;
 `;
 
 // kreski
 const mixinSpan = css`
-    background-color: ${({ hamburger }, gray = ({ theme }) => theme.colors.mainGray, seaColor = ({ theme }) => theme.colors.seaColor) => hamburger ? gray : seaColor}; 
+    background-color: ${({ hamburger }, gray = ({ theme }) => theme.colors.primary, seaColor = ({ theme }) => theme.colors.seaColor) => hamburger ? gray : seaColor}; 
     height:${({ hamburger }) => hamburger ? '2px' : '2px'}; 
     right: 0px;
     transition-property: transform;

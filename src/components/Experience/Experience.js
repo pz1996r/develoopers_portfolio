@@ -28,7 +28,7 @@ const JobsChoices = styled.ul`
         display:block;
         width: 120px;
         height: 2px;
-        background-color:  ${({ theme }) => theme.colors.purple};
+        background-color:  ${({ theme }) => theme.colors.secondary};
         ${({ activeBorder }) => activeBorder * 120};
         position:absolute;
         bottom: 0;
@@ -46,14 +46,14 @@ const JobsChoices = styled.ul`
         }
     }
 `;
-const JobLi = styled.li`
 
-`;
+const JobLi = styled.li``;
+
 const JobBtn = styled.button`
     background-color:transparent;
     border: none;
-    color: ${({ activeJob, jobName, theme }) => activeJob === jobName ? theme.colors.purple : theme.colors.lightGray};
-    border-bottom: 2px solid  ${({ theme }) => theme.colors.lightGray};
+    color: ${({ activeJob, jobName, theme }) => activeJob === jobName ? theme.colors.secondary : theme.colors.primaryTransparent};
+    border-bottom: 2px solid  ${({ theme }) => theme.colors.primaryTransparent};
     min-width: 120px;
     height: 42px;
     outline: none;
@@ -62,7 +62,7 @@ const JobBtn = styled.button`
     cursor: pointer;
     @media (min-width: 640px){
         border-bottom: none;
-        border-left: 2px solid  ${({ theme }) => theme.colors.lightGray};
+        border-left: 2px solid  ${({ theme }) => theme.colors.primaryTransparent};
     }
 `;
 
@@ -85,12 +85,13 @@ const H5 = styled.h5`
     padding-top:24px;
     font-size: 1.1rem;
 `;
+
 const H6 = styled.h6`
     font-size: .8rem;
     font-weight:200;
-    /* padding-top:10px; */
     padding: 10px 0;
 `;
+
 const DutyList = styled.ul`
     padding-top:14px;
     font-weight:300;
@@ -98,19 +99,24 @@ const DutyList = styled.ul`
         font-weight:400;
     }
 `;
+
 const ProjectLink = styled(Link)`
     white-space: nowrap;
 `;
+
 const ProjectsContainer = styled.div`
     padding-top: 20px;
 `;
+
 const ProjectKey = styled.div`
     display:inline-block;
 `;
+
 const ResponsiveDiv = styled.div`
     width: 100%;
     overflow: hidden;
 `;
+
 class ExperienceComponent extends React.Component {
     constructor(props) {
         super(props);

@@ -15,7 +15,6 @@ const Main = styled.section`
     @media (min-width: 340px){
         padding: 100px 0 40px 0;
     }
-    /* padding: 100px 0 40px 0; */
     @media(min-width: 1024px) {
         min-height: 100vh;
         padding: 100px 0;

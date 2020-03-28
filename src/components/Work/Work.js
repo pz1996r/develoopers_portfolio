@@ -60,7 +60,7 @@ const Icon = styled.a`
 `;
 const ProjectTitle = styled.h5`
     font-size: 1.2rem;
-    color: ${({ theme }) => theme.colors.superWhite};
+    color: ${({ theme }) => theme.colors.white};
 `;
 
 const ProjectDescription = styled.p`
@@ -75,7 +75,7 @@ const Technologies = styled.ul`
 `;
 const Technology = styled.li`
     display:inline-block;
-    color: ${({ theme }) => theme.colors.lightGray};
+    color: ${({ theme }) => theme.colors.primaryTransparent};
     font-weight: .8rem;
     padding: 3px 6px;
     font-weight: 300;

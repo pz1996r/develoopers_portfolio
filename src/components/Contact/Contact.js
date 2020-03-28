@@ -4,7 +4,6 @@ import SectionTitle from "../SectionCommonComponents/SectionTitle";
 import Section from "../SectionCommonComponents/SectionContainer";
 import { Btn } from '../Main-home/Introduction';
 
-
 const ContactSection = styled(Section)`
     text-align:center;
     margin-bottom:64px;

@@ -119,10 +119,12 @@ class DeveloperPage extends React.Component {
             hamburger: !this.state.hamburger,
         })
     }
+
     redirectSection = (href) => {
         this.displayNav();
         setTimeout(scrollTo.bind(null, href), 290);
     }
+
     scrollFun = e => {
         if (!this.state.hamburger) {
             this.setState({
@@ -141,9 +143,8 @@ class DeveloperPage extends React.Component {
         window.removeEventListener('scroll', this.scrollFun);
     }
 
-
-
     render() {
+        console.log(this.props.uri);
         let delay = 100;
         let mobileDelay = 100;
         return (
@@ -170,7 +171,6 @@ class DeveloperPage extends React.Component {
                         <MainHome delay={[delay, mobileDelay]}>
                             {MaineHomeValues.map((item) => {
                                 delay += 150;
-                                // mobileDelay += 100;
                                 mobileDelay += 150;
                                 return (<item.tag key={[delay, mobileDelay]} delay={[delay, mobileDelay]} href={item.href ? item.href : null}>{this.state.lang === 'ENG' ? item.content : item.PLcontent}</item.tag>)
                             })}

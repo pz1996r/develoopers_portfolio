@@ -10,7 +10,8 @@ import { Li, List } from '../components/Navigation/List';
 import Main from '../components/Main';
 
 const UnstyledBTN = styled.button`
-    color: ${({ active, theme }) => active ? theme.colors.purple : 'black'};
+
+    color: ${({ active, theme }) => active ? theme.colors.secondary : theme.colors.primary};
     border: none;
     padding: 10px 20px;
     background-color: inherit;
@@ -18,7 +19,7 @@ const UnstyledBTN = styled.button`
     cursor: pointer;
     transition: .2s linear;
     &:hover{
-      color: ${({ theme }) => theme.colors.purple};
+      color: ${({ theme }) => theme.colors.secondary};
     }
     &:focus{
       outline:0;

@@ -4,9 +4,6 @@ import Button from '../Btn';
 
 const MobileContainer = styled.div`
     width: 200px;
-    /* height:100vh; */
-    /* min-height: -webkit-fill-available; */
-    /* min-height:100%; */
     min-height:${({ height }) => { if (height !== null && height > 0) { return `${height}px` } else { return '100vh' } }};
     position: absolute;
     display: flex;

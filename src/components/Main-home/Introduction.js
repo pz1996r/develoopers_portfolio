@@ -25,9 +25,6 @@ const responsiveBigText = css`
 `;
 
 const anim = css`
-    /* animation: show 250ms forwards ${({ delay }) => delay ? `${delay[1]}ms` : null}; */
-    /*  */
-    /* animation: ${({ delay }) => delay ? `show 350ms forwards ${delay[1]}ms` : 'show 350ms forwards'}; */
     animation: ${({ delay }) => delay ? `show 400ms forwards ${(delay[1] + 700)}ms` : 'show 200ms forwards'};
 
     @media (min-width: 640px){
@@ -39,13 +36,6 @@ const anim = css`
         transform: translate(0,80px);
         opacity: 0; 
     }
-    /* 20%{
-        transform: translate(0,30px);
-        opacity: 0.2;  
-    } */
-    /* 80%{
-        opacity: 1;  
-    } */
     100%{
         transform: translate(0,0);
         opacity: 1;
@@ -56,11 +46,7 @@ const Intro = styled.div`
     opacity: 0;
     position: relative;
     margin: auto 0;
-    /* animation: opacityContaier 50ms forwards ${({ delay }) => delay ? `${delay[1]}ms` : null}; */
-    /*  */
-    /* animation: ${({ delay }) => delay ? `opacityContaier 250ms forwards ${delay[1]}ms` : 'opacityContaier 50ms forwards'}; */
     animation: ${({ delay }) => delay ? `opacityContaier 50ms forwards ${(delay[1] + 0)}ms` : 'opacityContaier 50ms forwards'};
-    /* animation: ${({ delay }) => delay ? `opacityContaier 50ms forwards ${(delay[1] + 0)}ms` : 'opacityContaier 50ms forwards'}; */
 
     @media (min-width: 640px){
         animation: show 250ms forwards ${({ delay }) => delay ? `${delay[0]}ms` : null};
@@ -82,7 +68,7 @@ export const H3 = styled.h3`
     margin-bottom: 10px;
     position: relative;
     left: 40px;
-    color: ${({ theme }) => theme.colors.mainGray};
+    color: ${({ theme }) => theme.colors.primary};
     display: inline-block;
     transform: translate(0,20px);
     opacity: 0;
@@ -96,7 +82,7 @@ export const H3 = styled.h3`
         left: -48px;
         width: 35px;
         height: 2px;
-        background: ${({ theme }) => theme.colors.purple};
+        background: ${({ theme }) => theme.colors.secondary};
         content: "";
     }
 
@@ -111,11 +97,9 @@ export const H2 = styled.h2`
     margin-bottom: 5px;
     transition-delay: 2s;
     font-weight:600;
-    color: ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.secondary};
     transform: translate(0,20px);
-    /* opacity: 0.05; */
     opacity:0;
-    /* montserrat letter spacing */
     letter-spacing: -2px !important;
     @media (min-width: 1024px){
         letter-spacing: -4px !important;
@@ -128,11 +112,9 @@ export const H1 = styled.h1`
     ${responsiveBigText};
     margin-bottom: 20px;
     font-weight:600;
-    color: ${({ theme }) => theme.colors.mainGray};
+    color: ${({ theme }) => theme.colors.primary};
     transform: translate(0,20px);
-    /* opacity: 0.05; */
     opacity:0;
-    /* montserrat letter spacing */
     letter-spacing: -2px !important;
 
     @media (min-width: 1024px){

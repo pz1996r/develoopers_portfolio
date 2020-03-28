@@ -10,16 +10,19 @@ const Nav = styled.nav`
     align-items: center;
     padding-top: 28px;
     justify-content: space-between;
-    color: ${({ theme }) => theme.colors.navGray};
+    color: ${({ theme }) => theme.colors.primary};
     position: absolute;
     width: 100%;
     z-index: 3;
     @media (min-width: 640px) {
       padding-top: 36px;
     }
+    color: ${props => { console.log(props, 'eee'); return props.theme.main }};
+
 `;
 
 const Navigation = (props) => (
+  // podział na globalne oraz nie globalne kolory
   <Nav>
     <ImgWrapper>
       <Link to="/">

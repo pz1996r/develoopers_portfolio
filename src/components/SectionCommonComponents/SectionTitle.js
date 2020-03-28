@@ -13,7 +13,7 @@ const SectionTitle = styled.h4`
     &::before{
         display:inline-block;
         content: '${({ beforeValue }) => beforeValue}';
-        color: ${({ theme }) => theme.colors.purple};  
+        color: ${({ theme }) => theme.colors.secondary};  
         color: ${({ beforeValue }) => beforeValue + 'eee'};
         margin-right:6px;
         margin-right: 6px;

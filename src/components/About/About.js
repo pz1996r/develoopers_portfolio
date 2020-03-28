@@ -6,12 +6,6 @@ import SectionTitle from "../SectionCommonComponents/SectionTitle";
 import SectionLi from "../SectionCommonComponents/SectionLi";
 import Section from "../SectionCommonComponents/SectionContainer";
 
-// const Section = styled.section`
-//     width: 100%;
-//     max-width: 820px;
-//     margin: 0 auto;
-// `;
-
 const FlexContainer = styled.div`
     display: flex;
     flex-direction:column;
@@ -27,16 +21,13 @@ const AboutContainer = styled.div`
     }
 `;
 
-
 const ParagrafContainer = styled.div`
     @media (min-width: 640px){
         margin-right: 60px;
     }
 `;
 
-
 const SkillsContainer = styled.ul`
-        /* wyróżnienie  */
         font-weight:400;
 `;
 
@@ -72,11 +63,3 @@ const AboutComponent = (props) => (
     </Section>
 )
 export default AboutComponent;
-
-
-
-
-
-
-
-

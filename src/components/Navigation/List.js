@@ -29,7 +29,7 @@ const LiDefault = styled.li`
     position: relative;
     text-decoration: none;
     &:hover{
-          color: ${({ theme }) => theme.colors.purple};
+        color: ${({ theme }) => theme.colors.secondary};
     }
 `;
 

@@ -17,7 +17,7 @@ const DefaultShaftStyling = css`
     content:"";
     width: 70%;
     height: 0;
-    border-bottom: thin solid ${({ theme }) => theme.colors.purple};
+    border-bottom: thin solid ${({ theme }) => theme.colors.secondary};
     transform: translateY(-50%);
 `;
 
@@ -27,7 +27,7 @@ const DefaultPointStyling = css`
     width: 10px;
     height:10px;
     border-style:solid;
-    border-color:${({ theme }) => theme.colors.purple};
+    border-color:${({ theme }) => theme.colors.secondary};
 `;
 
 const ArrowLeft = styled(AniLink)`
@@ -145,7 +145,7 @@ const Choice = styled.span`
  &::after{
     content: "";
     display: block;
-    color: ${({ theme }) => theme.colors.purple};
+    color: ${({ theme }) => theme.colors.secondary};
     position: absolute;
     bottom: -16px;
     left: 50%;

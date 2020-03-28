@@ -3,9 +3,9 @@ import styled from 'styled-components';
 const Btn = styled.a`
     font-size: 1rem;
     display: inline-block;
-    border: ${({ second, theme }) => second ? `1px solid ${theme.colors.seaColor}` : `1px solid ${theme.colors.purple}`}; 
-    color: ${({ second, theme }) => second ? theme.colors.seaColor : theme.colors.purple}; 
-    background: ${({ second, theme }) => second ? theme.colors.seaColorBtn : theme.colors.purpleBtn}; 
+    border: ${({ second, theme }) => second ? `1px solid ${theme.colors.tertiary}` : `1px solid ${theme.colors.secondary}`}; 
+    color: ${({ second, theme }) => second ? theme.colors.tertiary : theme.colors.secondary}; 
+    background: ${({ second, theme }) => second ? theme.colors.tertiaryTransparent : theme.colors.secondaryTransparent}; 
     border-radius: 3px;
     transition: .3s ease-out;
     cursor: hand;
@@ -16,7 +16,7 @@ const Btn = styled.a`
 
     &:hover{
         cursor: pointer;
-        background: ${({ second, theme }) => second ? theme.colors.seaColorBtnHov : theme.colors.purpleBtnHov}; 
+        background: ${({ second, theme }) => second ? theme.colors.tertiaryHover : theme.colors.secondaryHover}; 
     }
 `;
 
