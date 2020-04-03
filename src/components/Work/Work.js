@@ -27,7 +27,7 @@ const Project = styled.div`
 const Project2 = styled.div`
     width:100%;
     padding:30px;
-    background-color: ${({ theme }) => theme.colors.secondaryHover};
+    background-color: ${({ theme }) => theme.colors.tertiary};
     color: ${({ theme }) => theme.colors.primaryTransparent};
 
 
