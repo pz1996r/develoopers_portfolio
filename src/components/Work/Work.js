@@ -27,7 +27,7 @@ const Project = styled.div`
 const Project2 = styled.div`
     width:100%;
     padding:30px;
-    background-color: ${({ theme }) => theme.colors.mobileNav};
+    background-color: ${({ theme }) => theme.colors.secondaryHover};
     color: ${({ theme }) => theme.colors.primaryTransparent};
 
 
