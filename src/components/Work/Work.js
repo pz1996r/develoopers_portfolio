@@ -11,7 +11,8 @@ import Section from "../SectionCommonComponents/SectionContainer";
 const Project = styled.div`
     width:100%;
     padding:30px;
-    background-color: ${({ theme }) => { console.log(theme.colors, 'testujemy mobileNav'); return theme.colors.mobileNav }};
+    background:red;
+    background: ${({ theme }) => { console.log(theme.colors.mobileNav, 'testujemy mobileNav'); return theme.colors.mobileNav }};
     border-radius: 6px;
     margin-bottom: 24px;
     display:flex;
