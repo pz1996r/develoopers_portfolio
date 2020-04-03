@@ -3,11 +3,11 @@ export const colors = {
         white: '#edf1fd',
     },
     home: {
-        // secondary: '#5851e8',
-        // secondaryTransparent: '#5851e814',
-        // secondaryHover: '#5851e87a',
-        // primary: '#374457',
-        // primaryTransparent: '#aeaeae',
+        secondary: '#5851e8',
+        secondaryTransparent: '#5851e814',
+        secondaryHover: '#5851e87a',
+        primary: '#374457',
+        primaryTransparent: '#aeaeae',
     },
     developer: {
         secondary: '#5851e8',
