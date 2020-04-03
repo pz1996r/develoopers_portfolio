@@ -40,13 +40,11 @@ html{
 const StyledWrapper = styled.div``;
 
 const Layout = ({ children }) => {
-  // let promise = new Promise((resolve, reject) => {
-  //   setTimeout(() => resolve("done!"), 1000)
-  // });
+  while (typeof (globalHistory.location.pathname.split('').filter(letter => { return /[a-zA-Z]/.test(letter) }).join('')) !== 'string') {
 
-  let result = await promise;
-  const color = globalHistory.location.pathname.split('').filter(letter => { return /[a-zA-Z]/.test(letter) }).join('');
-  console.log(color)
+  }
+  const color = globalHistory.location.pathname.split('').filter(letter => { return /[a-zA-Z]/.test(letter) }).join('') || 'home';
+  console.log(color);
   return (
     <ThemeProvider theme={{ colors: { ...theme.colors.common, ...theme.colors[color] }, c: 'c' }} >
       <>
