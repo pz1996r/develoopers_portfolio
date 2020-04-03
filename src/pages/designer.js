@@ -61,7 +61,7 @@ class DeveloperPage extends React.Component {
         let delay = 100;
         let mobileDelay = 100;
         return (
-            <Layout>
+            <Layout path="designer">
                 <Helmet>
                     <meta charSet="utf-8" />
                     <title>Develoopers Anna Green</title>

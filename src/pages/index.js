@@ -69,7 +69,7 @@ class IndexPage extends React.Component {
     let delay = 100;
     let mobileDelay = 100;
     return (
-      <Layout>
+      <Layout path="home">
         <Helmet>
           <meta charSet="utf-8" />
           <title>Develoopers</title>

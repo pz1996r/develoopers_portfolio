@@ -39,12 +39,10 @@ html{
 
 const StyledWrapper = styled.div``;
 
-const Layout = ({ children }) => {
-  while (typeof (globalHistory.location.pathname.split('').filter(letter => { return /[a-zA-Z]/.test(letter) }).join('')) !== 'string') { };
-  const color = globalHistory.location.pathname.split('').filter(letter => { return /[a-zA-Z]/.test(letter) }).join('') || 'home';
-  console.log(color);
+const Layout = ({ path, children }) => {
+  // const color = globalHistory.location.pathname.split('').filter(letter => { return /[a-zA-Z]/.test(letter) }).join('') || 'home';
   return (
-    <ThemeProvider theme={{ colors: { ...theme.colors.common, ...theme.colors[color] }, c: 'c' }} >
+    <ThemeProvider theme={{ colors: { ...theme.colors.common, ...theme.colors[path] }, c: 'c' }} >
       <>
         <GlobalStyle />
         <Helmet>
