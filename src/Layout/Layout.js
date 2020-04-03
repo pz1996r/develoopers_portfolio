@@ -40,9 +40,9 @@ html{
 const StyledWrapper = styled.div``;
 
 const Layout = ({ children }) => {
-  const color = globalHistory.location.pathname.split('').filter(letter => { return /[a-zA-Z]/.test(letter) }).join('') || 'home';
+  // const color = globalHistory.location.pathname.split('').filter(letter => { return /[a-zA-Z]/.test(letter) }).join('') || 'home';
   return (
-    <ThemeProvider theme={{ colors: { ...theme.colors.common, ...theme.colors[color] }, c: 'c' }} >
+    <ThemeProvider theme={{ colors: { ...theme.colors.common, ...theme.colors[globalHistory.location.pathname.split('').filter(letter => { return /[a-zA-Z]/.test(letter) }).join('')] }, c: 'c' }} >
       <>
         <GlobalStyle />
         <Helmet>

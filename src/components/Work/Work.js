@@ -11,8 +11,7 @@ import Section from "../SectionCommonComponents/SectionContainer";
 const Project = styled.div`
     width:100%;
     padding:30px;
-    /* background: #282569; */
-    background: ${({ theme }) => { console.log('..x..', Boolean(theme.colors.tertiary)); const color = theme.colors.tertiary ? theme.colors.tertiary : 'green'; return color }};
+    background: ${({ theme }) => theme.colors.mobileNav};
     border-radius: 6px;
     margin-bottom: 24px;
     display:flex;
@@ -23,12 +22,6 @@ const Project = styled.div`
     @media (min-width: 1024px){
         width:32%;
 }
-`;
-const Project2 = styled.div`
-    width:100%;
-    padding:30px;
-    background-color: ${({ theme }) => theme.colors.secondary};
-    color: ${({ theme }) => theme.colors.secondaryy};
 `;
 const IconsWrapper = styled.div`
     display:flex;
@@ -109,7 +102,6 @@ const WorkComponent = ({ title, projects }) => (
                 <ProjectDescription>{project.description}</ProjectDescription>
                 <Technologies>{project.technologies.map(technology => <Technology key={technology + project.title}>{technology}</Technology>)}</Technologies>
             </Project>)}
-            <Project2>dawwa</Project2>
         </FlexContainer>
     </Section>
 );
