@@ -17,7 +17,7 @@ const Nav = styled.nav`
     @media (min-width: 640px) {
       padding-top: 36px;
     }
-    color: ${props => { console.log(props, 'eee'); return props.theme.main }};
+    color: ${props => props.theme.main};
 
 `;
 

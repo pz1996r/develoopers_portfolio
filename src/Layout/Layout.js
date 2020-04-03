@@ -41,7 +41,6 @@ const StyledWrapper = styled.div``;
 
 const Layout = ({ children }) => {
   const color = globalHistory.location.pathname.split('').filter(letter => { return /[a-zA-Z]/.test(letter) }).join('') || 'home';
-  console.log(color);
   return (
     <ThemeProvider theme={{ colors: { ...theme.colors.common, ...theme.colors[color] }, c: 'c' }} >
       <>

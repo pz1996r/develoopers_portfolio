@@ -144,7 +144,6 @@ class DeveloperPage extends React.Component {
     }
 
     render() {
-        console.log(this.props.uri);
         let delay = 100;
         let mobileDelay = 100;
         return (
