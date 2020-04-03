@@ -11,6 +11,7 @@ export const colors = {
     },
     developer: {
         secondary: '#5851e8',
+        secondaryy: '#84E8E8',
         secondaryTransparent: '#5851e814',
         secondaryHover: '#5851e87a',
         tertiary: '#84E8E8',

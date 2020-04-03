@@ -28,9 +28,7 @@ const Project2 = styled.div`
     width:100%;
     padding:30px;
     background-color: ${({ theme }) => theme.colors.secondary};
-    color: ${({ theme }) => theme.colors.tertiary};
-
-
+    color: ${({ theme }) => theme.colors.secondaryy};
 `;
 const IconsWrapper = styled.div`
     display:flex;
