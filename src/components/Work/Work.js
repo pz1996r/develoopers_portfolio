@@ -28,6 +28,7 @@ const Project2 = styled.div`
     width:100%;
     padding:30px;
     background-color: ${({ theme }) => theme.colors.tertiary};
+    color: ${({ theme }) => theme.colors.primaryTransparent};
 
 
 `;
