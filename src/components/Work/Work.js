@@ -24,6 +24,13 @@ const Project = styled.div`
         width:32%;
 }
 `;
+const Project2 = styled.div`
+    width:100%;
+    padding:30px;
+    background-color: ${({ theme }) => theme.colors.tertiary};
+
+
+`;
 const IconsWrapper = styled.div`
     display:flex;
     padding-bottom:30px;
@@ -103,7 +110,7 @@ const WorkComponent = ({ title, projects }) => (
                 <ProjectDescription>{project.description}</ProjectDescription>
                 <Technologies>{project.technologies.map(technology => <Technology key={technology + project.title}>{technology}</Technology>)}</Technologies>
             </Project>)}
-            <Project>dawwa</Project>
+            <Project2>dawwa</Project2>
         </FlexContainer>
     </Section>
 );
