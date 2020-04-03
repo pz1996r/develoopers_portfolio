@@ -12,7 +12,7 @@ const Project = styled.div`
     width:100%;
     padding:30px;
     /* background: #282569; */
-    background: ${({ theme }) => { console.log('..x..', bolean(theme.colors.tertiary)); const color = theme.colors.tertiary ? theme.colors.tertiary : 'green'; return color }};
+    background: ${({ theme }) => { console.log('..x..', Boolean(theme.colors.tertiary)); const color = theme.colors.tertiary ? theme.colors.tertiary : 'green'; return color }};
     border-radius: 6px;
     margin-bottom: 24px;
     display:flex;
