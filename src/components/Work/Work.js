@@ -103,6 +103,7 @@ const WorkComponent = ({ title, projects }) => (
                 <ProjectDescription>{project.description}</ProjectDescription>
                 <Technologies>{project.technologies.map(technology => <Technology key={technology + project.title}>{technology}</Technology>)}</Technologies>
             </Project>)}
+            <Project>dawwa</Project>
         </FlexContainer>
     </Section>
 );
