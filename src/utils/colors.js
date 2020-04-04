@@ -22,11 +22,18 @@ export const colors = {
     },
     designer: {
         secondary: '#FFA2D6',
-        mobileNav: '#FFA2D6',
+        // mobileNav: '#923c6c',
+        mobileNav: '#606060',
         secondaryTransparent: '#FFE4f3',
         secondaryHover: '#FCD0E9',
         primary: '#606060',
         primaryTransparent: '#aeaeae',
+        tertiary: '#FFA2D6',
+        tertiaryTransparent: '#ffe4f330',
+        // tertiaryHover: '#f0d2e37d',
+        tertiaryHover: '#f0d2e308'
+
+
     },
 
 }
