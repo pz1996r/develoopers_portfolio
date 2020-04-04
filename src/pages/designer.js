@@ -67,6 +67,24 @@ class DeveloperPage extends React.Component {
             console.log('programisto element do którego chcesz zeskrollować stronę nie istnieje.');
         }
     }
+
+    scrollFun = e => {
+        if (!this.state.hamburger) {
+            this.setState({
+                hamburger: true,
+            })
+        }
+    }
+
+    componentDidMount() {
+        this.setState({
+            height: window.innerHeight,
+        })
+        window.addEventListener('scroll', this.scrollFun);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.scrollFun);
+    }
     render() {
         let delay = 100;
         let mobileDelay = 100;
