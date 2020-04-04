@@ -63,6 +63,7 @@ class DeveloperPage extends React.Component {
 
     displayNav = () => {
         this.setState({
+            height: window.innerHeight,
             hamburger: !this.state.hamburger,
         })
     }
