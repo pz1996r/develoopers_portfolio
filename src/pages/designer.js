@@ -145,7 +145,7 @@ class DeveloperPage extends React.Component {
 
 export const query = graphql`
 {
-    file(name:{eq:"AnnaHrynchuk"}){
+    file(name:{eq:"AniaHrynchuk"}){
         childImageSharp{
             fixed(width:240, quality:100 ){
                 ...GatsbyImageSharpFixed_tracedSVG
