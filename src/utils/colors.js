@@ -20,6 +20,12 @@ export const colors = {
         primaryTransparent: '#aeaeae',
         mobileNav: '#282569',
     },
-    designer: {},
+    designer: {
+        secondary: '#FFA2D6',
+        secondaryTransparent: '#FFE4f3',
+        secondaryHover: '#FCD0E9',
+        primary: '#606060',
+        primaryTransparent: '#aeaeae',
+    },
 
 }

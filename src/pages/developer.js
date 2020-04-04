@@ -19,12 +19,14 @@ import FooterComponent from '../components/Footer/Footer';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { IntroductionBtn, LiLink } from '../components/PortfoliosComponent/PortfoliosComponent';
 
+import skillIMG from "../images/skill.svg";
+
 const NavValues = [
     { content: 'About', tag: LiLink, href: "#About", type: 'btn' },
     { content: 'Experience', tag: LiLink, href: "#Experience", type: 'btn' },
     { content: 'Work', tag: LiLink, href: "#Work", type: 'btn' },
     { content: 'Contact', tag: LiLink, href: "#Contact", type: 'btn' },
-    { content: 'Resume', tag: LiLink, href: '/portfolios/Piotr%20Zachoszcz.pdf', type: 'link', target: "_blank", rel: "nofollow noopener noreferrer" },
+    { content: 'Resume', tag: LiLink, href: '/portfolios/Piotr%20Zachoszcz.pdf', type: 'link', target: "_blank", rel: "nofollow noopener noreferrer", contrast: false },
 ];
 
 const MaineHomeValues = [
@@ -32,12 +34,12 @@ const MaineHomeValues = [
     { tag: H2, content: "Piotr Zachoszcz", PLcontent: "Piotr Zachoszcz" },
     { tag: H1, content: "I build stuff for web", PLcontent: "Tworzę rozwiązania webowe" },
     { tag: Desc, content: "I'm a frontend developer based in Wroclaw, specialazing in creating stuff for web (mainly frontend, but occasionally also backend).", PLcontent: "Jestem fronend developerem z Wrocławia. Specjalizuje się w tworzeniu rozwiązań webowych (głównie po stronie fronendu, lecz czasami piszę również w node.js oraz PHP)." },
-    { tag: IntroductionBtn, content: "Get In Touch", PLcontent: "Skontaktuj się", href: "mailto:pz1996r@gmail.com" },
+    { tag: IntroductionBtn, content: "Get In Touch", PLcontent: "Skontaktuj się", href: "mailto:pz1996r@gmail.com", contrast: false },
 ];
 const AboutValues = {
     title: { value: 'About me', nummber: '01.' },
     skills: ['JavaScript (ES6+)', 'HTML & (S)CSS', 'REACT', 'Express', 'GATSBY', 'Node.js'],
-    img: 'url',
+    skillIMG: skillIMG
 }
 const ExperienceValues = {
     title: { value: "Where I've worked", nummber: '02.' },
@@ -160,7 +162,7 @@ class DeveloperPage extends React.Component {
                             if (item.type === 'btn') {
                                 return (<Li key={delay} delay={delay}><item.tag fun={() => scrollTo(item.href)}>{item.content}</item.tag></Li>)
                             }
-                            return (<Li key={delay} delay={delay}><item.tag href={item.href} target={item.target} rel={item.rel}>{item.content}</item.tag></Li>)
+                            return (<Li key={delay} delay={delay}><item.tag href={item.href} target={item.target} rel={item.rel} contrast={item.contrast ? item.contrast : null}>{item.content}</item.tag></Li>)
                         })}
                     </List>
                     <Hamburger hamburger={this.state.hamburger} hamburgerFun={this.displayNav}></Hamburger>
@@ -171,12 +173,12 @@ class DeveloperPage extends React.Component {
                             {MaineHomeValues.map((item) => {
                                 delay += 150;
                                 mobileDelay += 150;
-                                return (<item.tag key={[delay, mobileDelay]} delay={[delay, mobileDelay]} href={item.href ? item.href : null}>{this.state.lang === 'ENG' ? item.content : item.PLcontent}</item.tag>)
+                                return (<item.tag key={[delay, mobileDelay]} delay={[delay, mobileDelay]} href={item.href ? item.href : null} contrast={item.contrast ? item.contrast : null}>{this.state.lang === 'ENG' ? item.content : item.PLcontent}</item.tag>)
                             })}
                         </MainHome>
                         <AboutComponent {...AboutValues} image={this.props.data}>
                             <SectionP>Hello! my name is Piotr Zachoszcz and I'm a junior froned developer based in Wrocław. I develop thinks that looks awesome and have useful funcionality. In free time I improve my programing skills, by creacting web application and unusuall websites like this portfolio whitch you are looking at.</SectionP>
-                            <SectionP>Shortly after graduating from <SectionLink href="google">WSH</SectionLink> i join to the Coders Camp organized by <SectionLink href="https://coderscrew.pl/">Coders Crew</SectionLink> in order to improve my React and Node skills. In the meantime I began studies on <SectionLink href="https://pwr.edu.pl/">PWr</SectionLink>, becouse I'm curiose how to create mobile apps, and i would like to know more programing languages then JavaScript and PHP. I also care about foregin languages, thats why I attend to english classes at <SectionLink href="http://wsj.edu.pl/">WSJ</SectionLink>.</SectionP>
+                            <SectionP>Shortly after graduating from <SectionLink href="google">WSH</SectionLink> i join to the Coders Camp organized by <SectionLink href="https://coderscrew.pl/">Coders Crew</SectionLink> in order to improve my React and Node skills. In the meantime I began studies on <SectionLink href="https://pwr.edu.pl/">PWr</SectionLink>, because I'm curiose how to create mobile apps, and i would like to know more programing languages then JavaScript and PHP. I also care about foregin languages, thats why I attend to english classes at <SectionLink href="http://wsj.edu.pl/">WSJ</SectionLink>.</SectionP>
                             <SectionP>Here are a few technologies I have been working with recently: </SectionP>
                         </AboutComponent>
                         <ExperienceComponent {...ExperienceValues} />

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from "react";
 import Img from "gatsby-image";
-import SkillIMG from "../../images/skill.svg";
+// import SkillIMG from "../../images/skill.svg";
 import SectionTitle from "../SectionCommonComponents/SectionTitle";
 import SectionLi from "../SectionCommonComponents/SectionLi";
 import Section from "../SectionCommonComponents/SectionContainer";
@@ -55,7 +55,7 @@ const AboutComponent = (props) => (
                     {props.children}
                 </ParagrafContainer>
                 <SkillsContainer>
-                    {props.skills.map((skill => (<Skill key={skill} skillIMG={SkillIMG}>{skill}</Skill>)))}
+                    {props.skills.map((skill => (<Skill key={skill} skillIMG={props.skillIMG}>{skill}</Skill>)))}
                 </SkillsContainer>
             </AboutContainer>
             <Image fixed={props.image.file.childImageSharp.fixed} />

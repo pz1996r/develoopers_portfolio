@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { theme } from '../utils/theme'
-import { globalHistory } from "@reach/router"
 import { Helmet } from "react-helmet"
 
 const GlobalStyle = createGlobalStyle`
@@ -40,7 +39,6 @@ html{
 const StyledWrapper = styled.div``;
 
 const Layout = ({ path, children }) => {
-  // const color = globalHistory.location.pathname.split('').filter(letter => { return /[a-zA-Z]/.test(letter) }).join('') || 'home';
   return (
     <ThemeProvider theme={{ colors: { ...theme.colors.common, ...theme.colors[path] }, c: 'c' }} >
       <>
