@@ -22,6 +22,7 @@ export const colors = {
     },
     designer: {
         secondary: '#FFA2D6',
+        mobileNav: '#FFA2D6',
         secondaryTransparent: '#FFE4f3',
         secondaryHover: '#FCD0E9',
         primary: '#606060',

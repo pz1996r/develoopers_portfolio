@@ -43,7 +43,7 @@ const HamburgerBox = styled.span`
 
 // kreski
 const mixinSpan = css`
-    background-color: ${({ hamburger }, gray = ({ theme }) => theme.colors.primary, seaColor = ({ theme }) => theme.colors.seaColor) => hamburger ? gray : seaColor}; 
+    background-color: ${({ hamburger }, gray = ({ theme }) => theme.colors.primary, tertiary = ({ theme }) => theme.colors.tertiary) => hamburger ? gray : tertiary}; 
     height:${({ hamburger }) => hamburger ? '2px' : '2px'}; 
     right: 0px;
     transition-property: transform;
