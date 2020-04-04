@@ -158,7 +158,7 @@ const Arrows = (props) => (
         <ArrowLeft cover direction="left" bg="rebeccapurple" to={`/developer`}></ArrowLeft>
         <Choice></Choice>
         <P>{props.children}</P>
-        <ArrowRight cover direction="right" bg="rebeccapurple" to={`/designer`}></ArrowRight>
+        <ArrowRight cover direction="right" bg="#FFA2D6" to={`/designer`}></ArrowRight>
         <Choice></Choice>
     </Container>
 )
