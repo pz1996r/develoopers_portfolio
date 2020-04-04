@@ -10,11 +10,11 @@ font-size: 1.4rem;
 const SectionTitle = styled.h4`
     ${responsiveBigText};
     padding: 32px 0;
+    color: ${({ theme }) => theme.colors.primary}; 
     &::before{
         display:inline-block;
         content: '${({ beforeValue }) => beforeValue}';
         color: ${({ theme }) => theme.colors.secondary};  
-        color: ${({ beforeValue }) => beforeValue + 'eee'};
         margin-right:6px;
         margin-right: 6px;
     }

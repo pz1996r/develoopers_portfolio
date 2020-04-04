@@ -18,7 +18,6 @@ export const Button = styled(Btn)`
     margin-right: 30px;
     margin-left: 20px;
     transition: .3s linear;
-    color: ${({ contrast, theme }) => contrast ? theme.colors[contrast] : null};
     &:focus {outline:0 !important}
     @media (min-width: 640px){
         font-weight:500;
@@ -29,7 +28,6 @@ export const Button = styled(Btn)`
 `;
 
 export const IntroductionBtn = styled(Btn)`
-    color: ${({ contrast, theme }) => contrast ? theme.colors[contrast] : null};
     @media (min-width: 1024px){
         margin-top: 20px;
     }

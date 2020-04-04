@@ -13,18 +13,12 @@ import SectionP from '../components/SectionCommonComponents/SectionP';
 import SectionLink from "../components/SectionCommonComponents/SectionLink";
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { IntroductionBtn, LiLink } from '../components/PortfoliosComponent/PortfoliosComponent';
+import ContactComponent from '../components/Contact/Contact';
+import FooterComponent from '../components/Footer/Footer';
+import ExperienceComponent from '../components/Experience/Experience';
 
 import skillIMG from "../images/pinkskill.svg";
 
-
-
-// const NavValues = [
-//     { content: 'About', tag: A },
-//     { content: 'Experience', tag: A },
-//     { content: 'Work', tag: A },
-//     { content: 'Contact', tag: A },
-//     { content: 'Resume', tag: Button },
-// ];
 const NavValues = [
     { content: 'About', tag: LiLink, href: "#About", type: 'btn' },
     { content: 'Experience', tag: LiLink, href: "#Experience", type: 'btn' },
@@ -44,12 +38,26 @@ const AboutValues = {
     skills: ['JavaScript (ES6+)', 'HTML & (S)CSS', 'REACT', 'Express', 'GATSBY', 'Node.js'],
     skillIMG: skillIMG
 }
+const ExperienceValues = {
+    title: { value: "Where I've worked", nummber: '02.' },
+    work: [
+        { name: "Hokito", jobSiteLink: "https://hokito.pl/", jobTitle: "Full Stack Developer", siteLink: "https://hokito.pl/", period: "October 2018 - January	2019", dutys: ['Worked with a team of two developers and designer to build web aplication for private travel agency.', 'Developed and maintained code for client websites', 'Worked on website positioning'], projects: [] },
+        { name: "Coders Camp", jobSiteLink: "https://coderscamp.edu.pl/", jobTitle: "Camp Participant", siteLink: "https://coderscamp.edu.pl/", period: "October 2019 - Janurary 2020", dutys: ['Worked with team to develop few application (portoflio website, chess game, language game and fridge app witch are still has been developing on github).', 'Improved theoritical knowlage of node.js, react, webpack, npm, and JavaScript (asysnc, promises, fetch, spread operator, OOP etc.)'], projects: [] },
+    ],
+    skillIMG: skillIMG
+}
+const ContactValues = {
+    title: { value: "Get in touch", nummber: '04.' },
+    paragraf: "In spite of I've still improve my programming skills by my own, I woud like to start working under the guidance of more experienced developers. I'm ready to take up my first job or internship, so If you are looking for somebody like me click button below.  ",
+    button: { content: 'Get in Touch', href: "mailto:annagreenv14@gmail.com", contrast: 'primary' }
+}
 
 const windowGlobal = typeof window !== 'undefined' ? window : { localStorage: { lang: null } };
 class DeveloperPage extends React.Component {
     state = {
         hamburger: true,
         lang: windowGlobal.localStorage['lang'] || 'ENG',
+        height: null,
     }
 
 
@@ -82,6 +90,7 @@ class DeveloperPage extends React.Component {
         })
         window.addEventListener('scroll', this.scrollFun);
     }
+
     componentWillUnmount() {
         window.removeEventListener('scroll', this.scrollFun);
     }
@@ -121,8 +130,12 @@ class DeveloperPage extends React.Component {
                             <SectionP>Shortly after graduating from <SectionLink href="google">WSH</SectionLink> i join to the Coders Camp organized by <SectionLink href="https://coderscrew.pl/">Coders Crew</SectionLink> in order to improve my React and Node skills. In the meantime I began studies on <SectionLink href="https://pwr.edu.pl/">PWr</SectionLink>, because I'm curiose how to create mobile apps, and i would like to know more programing languages then JavaScript and PHP. I also care about foregin languages, thats why I attend to english classes at <SectionLink href="http://wsj.edu.pl/">WSJ</SectionLink>.</SectionP>
                             <SectionP>Here are a few technologies I have been working with recently: </SectionP>
                         </AboutComponent>
+                        <ExperienceComponent {...ExperienceValues} />
+                        {/* jednego brakuje na razie  */}
+                        <ContactComponent {...ContactValues} />
+                        <FooterComponent />
                     </Main>
-                    <MobileNav hamburger={this.state.hamburger} links={NavValues} fun={this.redirectSection}></MobileNav>
+                    <MobileNav hamburger={this.state.hamburger} links={NavValues} height={this.state.height} fun={this.redirectSection}></MobileNav>
                 </div>
             </Layout >
         )
@@ -133,11 +146,7 @@ export const query = graphql`
 {
     file(name:{eq:"AnnaHrynchuk"}){
         childImageSharp{
-            fixed(width:240, quality:100 
-                , duotone: {
-                highlight: "#edf1fd",
-                shadow: "#f894cb"
-              }){
+            fixed(width:240, quality:100 ){
                 ...GatsbyImageSharpFixed_tracedSVG
             }
         }

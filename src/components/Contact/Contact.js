@@ -15,6 +15,8 @@ const ContactTitle = styled(SectionTitle)`
 const Button = styled(Btn)`
     margin: 0 auto;
     margin-right:auto !important;
+    /* color: ${({ contrast, theme }) => contrast ? theme.colors[contrast] : null}; */
+    /* color: red; */
     @media (min-width: 1024px){
         margin: 0 auto;
         margin-right:auto;
@@ -32,10 +34,11 @@ const ContactP = styled.p`
 `;
 
 const ContactComponent = ({ title, paragraf, button }) => (
+
     <ContactSection id="Contact">
         <ContactTitle beforeValue={title.nummber}>{title.value}</ContactTitle>
         <ContactP>{paragraf}</ContactP>
-        <Button href={button.href ? button.href : null}>{button.content}</Button>
+        <Button href={button.href ? button.href : null} contrast={button.contrast ? button.contrast : null}>{button.content}</Button>
     </ContactSection>
 );
 

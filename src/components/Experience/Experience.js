@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import React from "react";
-import SkillIMG from "../../images/skill.svg";
 import SectionTitle from "../SectionCommonComponents/SectionTitle";
 import SectionLi from "../SectionCommonComponents/SectionLi";
 import Section from "../SectionCommonComponents/SectionContainer";
@@ -147,11 +146,11 @@ class ExperienceComponent extends React.Component {
                                 <H5>{job.jobTitle} <Link href={job.jobSiteLink}>@ {job.name}</Link></H5>
                                 <H6>{job.period}</H6>
                                 <DutyList>
-                                    {job.dutys.map((duty, index) => <SectionLii key={(index + job.name + 'duty')} skillIMG={SkillIMG}>{duty}</SectionLii>)}
+                                    {job.dutys.map((duty, index) => <SectionLii key={(index + job.name + 'duty')} skillIMG={this.props.skillIMG}>{duty}</SectionLii>)}
                                 </DutyList>
 
                                 <ProjectsContainer>
-                                    <H6>Projects: </H6>
+                                    {job.projects.length > 0 && <H6>Projects: </H6>}
                                     {job.projects.map(project => <ProjectKey key={(project.Link + project.name + 'proj')}><ProjectLink href={project.Link} >[{project.name}]  </ProjectLink>  </ProjectKey>)}
                                 </ProjectsContainer>
                             </JobPresentation>)}

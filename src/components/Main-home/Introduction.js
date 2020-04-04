@@ -145,6 +145,7 @@ export const Btn = styled(Button)`
     ${anim};
     transform: translate(0,20px);
     opacity: 0; 
+    color: ${({ contrast, theme }) => contrast ? theme.colors[contrast] : null};
     @media (min-width: 640px){
         font-weight:500;
     }

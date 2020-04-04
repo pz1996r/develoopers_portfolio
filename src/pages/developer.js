@@ -46,7 +46,8 @@ const ExperienceValues = {
     work: [
         { name: "Hokito", jobSiteLink: "https://hokito.pl/", jobTitle: "Full Stack Developer", siteLink: "https://hokito.pl/", period: "October 2018 - January	2019", dutys: ['Worked with a team of two developers and designer to build web aplication for private travel agency.', 'Developed and maintained code for client websites', 'Worked on website positioning'], projects: [{ Link: "http://pharmex.pl/", name: "Pharemx" }, { Link: "https://creamadventureclub.pl/", name: "Cream Adventure Club" }, { Link: "http://amplifica.pl/", name: "Amlifica" }, { Link: "https://claritywindows.com/", name: "Clarity Windows" }] },
         { name: "Coders Camp", jobSiteLink: "https://coderscamp.edu.pl/", jobTitle: "Camp Participant", siteLink: "https://coderscamp.edu.pl/", period: "October 2019 - Janurary 2020", dutys: ['Worked with team to develop few application (portoflio website, chess game, language game and fridge app witch are still has been developing on github).', 'Improved theoritical knowlage of node.js, react, webpack, npm, and JavaScript (asysnc, promises, fetch, spread operator, OOP etc.)'], projects: [{ Link: "https://github.com/jatanski/cc5.Chess", name: "Chess" }, { Link: "https://github.com/jatanski/zieloni", name: "LinguaChallenge" }, { Link: "https://github.com/jatanski/myFridge", name: "Fridge App" }] },
-    ]
+    ],
+    skillIMG: skillIMG
 }
 const WorkValues = {
     title: { value: "Some things I've Built", nummber: '03.' },
@@ -167,8 +168,8 @@ class DeveloperPage extends React.Component {
                     </List>
                     <Hamburger hamburger={this.state.hamburger} hamburgerFun={this.displayNav}></Hamburger>
                 </Navigation>
-                <div id="content" onScroll={this.scrollFun}>
-                    <Main onScroll={this.scrollFun}>
+                <div id="content" >
+                    <Main >
                         <MainHome delay={[delay, mobileDelay]}>
                             {MaineHomeValues.map((item) => {
                                 delay += 150;
