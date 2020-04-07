@@ -52,6 +52,7 @@ const JobBtn = styled.button`
     background-color:transparent;
     border: none;
     font-weight:800;
+    font-size: .7rem;
     color: ${({ activeJob, jobName, theme }) => activeJob === jobName ? theme.colors.secondary : theme.colors.primaryTransparent};
     border-bottom: 2px solid  ${({ theme }) => theme.colors.primaryTransparent};
     min-width: 120px;
