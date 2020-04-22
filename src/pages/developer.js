@@ -42,6 +42,7 @@ const AboutValues = {
     skillIMG: skillIMG
 }
 const ExperienceValues = {
+    active:'Hokito',
     title: { value: "Where I've worked", nummber: '02.' },
     work: [
         { name: "Hokito", jobSiteLink: "https://hokito.pl/", jobTitle: "Full Stack Developer", siteLink: "https://hokito.pl/", period: "October 2018 - January	2019", dutys: ['Worked with a team of two developers and designer to build web aplication for private travel agency.', 'Developed and maintained code for client websites', 'Worked on website positioning'], projects: [{ Link: "http://pharmex.pl/", name: "Pharemx" }, { Link: "https://creamadventureclub.pl/", name: "Cream Adventure Club" }, { Link: "http://amplifica.pl/", name: "Amlifica" }, { Link: "https://claritywindows.com/", name: "Clarity Windows" }] },
@@ -178,7 +179,7 @@ class DeveloperPage extends React.Component {
                             })}
                         </MainHome>
                         <AboutComponent {...AboutValues} image={this.props.data}>
-                            <SectionP>Hello! my name is Piotr Zachoszcz and I'm a junior froned developer based in Wrocław. I develop thinks that looks awesome and have useful funcionality. In free time I improve my programing skills, by creacting web application and unusuall websites like this portfolio whitch you are looking at.</SectionP>
+                            <SectionP>Hello! my name is Piotr Zachoszcz and I'm a junior froned developer based in Wroclaw. I develop thinks that looks awesome and have useful funcionality. In free time I improve my programing skills, by creacting web application and unusuall websites like this portfolio whitch you are looking at.</SectionP>
                             <SectionP>Shortly after graduating from <SectionLink href="google">WSH</SectionLink> i join to the Coders Camp organized by <SectionLink href="https://coderscrew.pl/">Coders Crew</SectionLink> in order to improve my React and Node skills. In the meantime I began studies on <SectionLink href="https://pwr.edu.pl/">PWr</SectionLink>, because I'm curiose how to create mobile apps, and i would like to know more programing languages then JavaScript and PHP. I also care about foregin languages, thats why I attend to english classes at <SectionLink href="http://wsj.edu.pl/">WSJ</SectionLink>.</SectionP>
                             <SectionP>Here are a few technologies I have been working with recently: </SectionP>
                         </AboutComponent>

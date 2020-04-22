@@ -5,6 +5,15 @@ import { Helmet } from "react-helmet"
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap');
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE and Edge */
+* {
+  -ms-overflow-style: none;
+}
+
 #content{
   position:relative;
   overflow:hidden;

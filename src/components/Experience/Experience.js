@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React from "react";
+import React, { Children } from "react";
 import SectionTitle from "../SectionCommonComponents/SectionTitle";
 import SectionLi from "../SectionCommonComponents/SectionLi";
 import Section from "../SectionCommonComponents/SectionContainer";
@@ -16,23 +16,25 @@ const JobsContainer = styled.div`
     }
 `;
 const JobsChoices = styled.ul`
+    overflow:scroll;
     display: flex;
     position: relative;
     @media (min-width: 640px){
         margin-right: 42px;
         flex-direction: column;
+        overflow:visible;
     }
     &::after{
         content:'';
         display:block;
-        width: 120px;
+        width: ${({ activeWidth }) => activeWidth + 'px'};
         height: 2px;
         background-color:  ${({ theme }) => theme.colors.secondary};
         ${({ activeBorder }) => activeBorder * 120};
         position:absolute;
         bottom: 0;
         left:0;
-        transform:  ${({ activeBorder }) => `translate(${activeBorder * 120}px,0)`};
+        transform:  ${({ activeBorder, activePosition }) => `translate(${activePosition}px,0)`};
         transition: transform .15s linear;
         border-radius: 2px;
         @media (min-width: 640px){
@@ -49,19 +51,23 @@ const JobsChoices = styled.ul`
 const JobLi = styled.li``;
 
 const JobBtn = styled.button`
+    white-space: nowrap;
     background-color:transparent;
     border: none;
     font-weight:800;
     font-size: .7rem;
     color: ${({ activeJob, jobName, theme }) => activeJob === jobName ? theme.colors.secondary : theme.colors.primaryTransparent};
     border-bottom: 2px solid  ${({ theme }) => theme.colors.primaryTransparent};
-    min-width: 120px;
+    // min-width: 120px;
+    padding: 0 14px;
     height: 42px;
     outline: none;
     transition: .15s linear .1s;
     border-radius: 1px;
     cursor: pointer;
     @media (min-width: 640px){
+        padding:0;
+        min-width: 150px;
         border-bottom: none;
         border-left: 2px solid  ${({ theme }) => theme.colors.primaryTransparent};
     }
@@ -121,16 +127,37 @@ const ResponsiveDiv = styled.div`
 class ExperienceComponent extends React.Component {
     constructor(props) {
         super(props);
+        this.jobsChoices = React.createRef();
         this.state = {
-            active: 'Hokito',
+            active: this.props.active,
             activeIndex: 0,
+            activePosition:0,
+            activeWidth:0,
         };
     }
+    componentDidMount(){
+        const activeWidth = this.jobsChoices.current.childNodes[0].offsetWidth;
+        // const positions = [...this.jobsChoices.current.childNodes].map((el)=>{prev += el.offsetWidth; return prev });
+        this.setState({
+            activeWidth,
+        });
+    }
 
-    handleChange = (value, index) => {
+    handleChange = (value, index,e) => {
+        const activeWidth = e.target.parentElement.offsetWidth;
+        const activePosition =  [...e.target.parentElement.parentElement.childNodes].reduce(function(previousValue, currentValue, i) {
+            return i < index ? previousValue + currentValue.offsetWidth : previousValue;
+        }, 0);
+        e.target.parentElement.parentElement.scrollTo({
+            left: activePosition - 80,
+            behavior: 'smooth'
+          });
+
         this.setState({
             active: value,
             activeIndex: index,
+            activePosition,
+            activeWidth,
         })
     }
 
@@ -139,8 +166,8 @@ class ExperienceComponent extends React.Component {
             <Section id="Experience">
                 <SectionTitle beforeValue={this.props.title.nummber}>{this.props.title.value}</SectionTitle>
                 <JobsContainer>
-                    <JobsChoices activeBorder={this.state.activeIndex}>
-                        {this.props.work.map((job, index) => <JobLi key={job.name}><JobBtn activeJob={this.state.active} jobName={job.name} onClick={this.handleChange.bind(null, job.name, index)}>{job.name}</JobBtn></JobLi>)}
+                    <JobsChoices activeBorder={this.state.activeIndex} activeWidth={this.state.activeWidth} activePosition = {this.state.activePosition} ref={this.jobsChoices}>
+                        {this.props.work.map((job, index) => <JobLi key={job.name}><JobBtn activeJob={this.state.active} jobName={job.name} onClick={(e)=>{this.handleChange(job.name, index, e)}}>{job.name}</JobBtn></JobLi>)}
                     </JobsChoices>
                     <ResponsiveDiv>
                         <JobPresentationContainer amount={this.props.work.length} activeIndex={this.state.activeIndex}>
