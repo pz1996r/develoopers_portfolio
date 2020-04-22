@@ -28,27 +28,30 @@ const NavValues = [
 ];
 const MaineHomeValues = [
     { tag: H3, content: "Hello I'm", PLcontent: "Cześć, tu" },
-    { tag: H2, content: "Anna Green", PLcontent: "Anna Green" },
-    { tag: H1, content: "I design apps", PLcontent: "Projektuję aplikacje" },
-    { tag: Desc, content: "I'm a designer based in Wroclaw", PLcontent: "Jestem designerem z Wrocławia." },
+    { tag: H2, content: "Anna Hrynchuk", PLcontent: "Anna Green" },
+    { tag: H1, content: "Create a website design", PLcontent: "Projektuję aplikacje" },
+    { tag: Desc, content: "I am a web designer based in Wroclaw, working with the interface of websites and their usability",
+    PLcontent: "Jestem designerem z Wrocławia." },
     { tag: IntroductionBtn, content: "Get In Touch", PLcontent: "Skontaktuj się", fn: "lack of", contrast: 'primary' },
 ];
 const AboutValues = {
     title: { value: 'About me', nummber: '01.' },
-    skills: ['JavaScript (ES6+)', 'HTML & (S)CSS', 'REACT', 'Express', 'GATSBY', 'Node.js'],
+    skills: ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe XD', 'Figma', 'HTML', 'CSS'],
     skillIMG: skillIMG
 }
 const ExperienceValues = {
+    active:'CodersCrew',
     title: { value: "Where I've worked", nummber: '02.' },
     work: [
-        { name: "Hokito", jobSiteLink: "https://hokito.pl/", jobTitle: "Full Stack Developer", siteLink: "https://hokito.pl/", period: "October 2018 - January	2019", dutys: ['Worked with a team of two developers and designer to build web aplication for private travel agency.', 'Developed and maintained code for client websites', 'Worked on website positioning'], projects: [] },
-        { name: "Coders Camp", jobSiteLink: "https://coderscamp.edu.pl/", jobTitle: "Camp Participant", siteLink: "https://coderscamp.edu.pl/", period: "October 2019 - Janurary 2020", dutys: ['Worked with team to develop few application (portoflio website, chess game, language game and fridge app witch are still has been developing on github).', 'Improved theoritical knowlage of node.js, react, webpack, npm, and JavaScript (asysnc, promises, fetch, spread operator, OOP etc.)'], projects: [] },
+        { name: "CodersCrew", jobSiteLink: "https://coderscrew.pl/", jobTitle: "UX/UI Designer", siteLink: "https://coderscrew.pl/", period: "February 2020 - now", dutys: ['Work in a team of UX/UI designers and developers creating websites', 'Create additional graphics for other projects', 'Participate in training and workshops conducted by the association' , 'Use such tools as: Jira, Confluence, Slack'], projects: [] },
+        { name: "CodersCamp", jobSiteLink: "https://coderscamp.edu.pl/", jobTitle: "Camp Participant", siteLink: "https://coderscamp.edu.pl/", period: "October 2019 - January 2020", dutys: ['Worked with team to develop few applications (portfolio website, TODO list, escape room).', 'Learning new programming languages'], projects: [] },
+        { name: "Klub Innowatora" , jobSiteLink: "https://www.facebook.com/otwarta12/?ref=bookmarks", jobTitle: "Intern", siteLink: "https://www.facebook.com/otwarta12/?ref=bookmarks", period: "December 2019 - now", dutys: ['Help in organizing events', 'Conducting a conversation with customers', 'Team management', 'Promoting the page on Facebook'], projects: [] },
     ],
     skillIMG: skillIMG
 }
 const ContactValues = {
     title: { value: "Get in touch", nummber: '04.' },
-    paragraf: "In spite of I've still improve my programming skills by my own, I woud like to start working under the guidance of more experienced developers. I'm ready to take up my first job or internship, so If you are looking for somebody like me click button below.  ",
+    paragraf: "In spite of I've still improve my programming skills by my own, I would like to start working under the guidance of more experienced developers. I'm ready to take up my first job or internship, so If you are looking for somebody like me click button below.  ",
     button: { content: 'Get in Touch', href: "mailto:annagreenv14@gmail.com", contrast: 'primary' }
 }
 
@@ -128,7 +131,9 @@ class DeveloperPage extends React.Component {
                         </MainHome>
                         <AboutComponent {...AboutValues} image={this.props.data}>
                             <SectionP>I like to experiment, I have a sense of style and my strength is to look at the world from a different perspective - creative and innovative, which helps me in my work.</SectionP>
-                            <SectionP>Shortly after graduating from <SectionLink href="google">WSH</SectionLink> i join to the Coders Camp organized by <SectionLink href="https://coderscrew.pl/">Coders Crew</SectionLink> in order to improve my React and Node skills. In the meantime I began studies on <SectionLink href="https://pwr.edu.pl/">PWr</SectionLink>, because I'm curiose how to create mobile apps, and i would like to know more programing languages then JavaScript and PHP. I also care about foregin languages, thats why I attend to english classes at <SectionLink href="http://wsj.edu.pl/">WSJ</SectionLink>.</SectionP>
+                            <SectionP>My story has started when I first took part in programming courses, learning HTML and CSS from <SectionLink href="google">Udemy</SectionLink>. Later I participated in the <SectionLink href="https://coderscrew.pl/">CodersCamp</SectionLink> course and after its completion, I joined the <SectionLink href="https://pwr.edu.pl/">CodersCrew</SectionLink> team where I work as a UX / UI designer. I am currently learning new programming languages for getting a better understanding of programming. In my spare time, I study foreign languages, draw or read books. 
+                            </SectionP>
+                            <SectionP>I do not stagnate, I am constantly developing and expanding my skills to be able to create better projects and become better day by day at programing.</SectionP>
                             <SectionP>Here are a few technologies I have been working with recently: </SectionP>
                         </AboutComponent>
                         <ExperienceComponent {...ExperienceValues} />
