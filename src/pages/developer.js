@@ -42,7 +42,7 @@ const AboutValues = {
     skillIMG: skillIMG
 }
 const ExperienceValues = {
-    active:'Hokito',
+    active: 'Hokito',
     title: { value: "Where I've worked", nummber: '02.' },
     work: [
         { name: "Hokito", jobSiteLink: "https://hokito.pl/", jobTitle: "Full Stack Developer", siteLink: "https://hokito.pl/", period: "October 2018 - January	2019", dutys: ['Worked with a team of two developers and designer to build web aplication for private travel agency.', 'Developed and maintained code for client websites', 'Worked on website positioning'], projects: [{ Link: "http://pharmex.pl/", name: "Pharemx" }, { Link: "https://creamadventureclub.pl/", name: "Cream Adventure Club" }, { Link: "http://amplifica.pl/", name: "Amlifica" }, { Link: "https://claritywindows.com/", name: "Clarity Windows" }] },
@@ -55,13 +55,13 @@ const WorkValues = {
     projects: [
         {
             githubLink: null,
-            visitLink: "https://www.nuestro.pl/",
+            visitLink: "http://nuestro.develoopers.pl",
             title: "Nuestro",
             description: "Nuestro is a web app for order management in cafes, although it could also be easily found in restaurants. The application is based on an authorial QR code scanner, whitch  is used for user authorization, thanks to which it receives access to the menu and ordering options. Nuestro has also administrative panel where waiters can manage the orders.",
             technologies: ['PHP', 'JavaScript', 'HTML', 'CSS', '.htaccess',]
         },
         {
-            githubLink: null,
+            githubLink: 'https://github.com/pz1996r/develoopers_portfolio',
             visitLink: "https://develoopers.com",
             title: "Portfolio",
             description: "Develoopers is my first website created in Gatsby. During that project I have learnt a lot new stuff like Styled Components, GraphQL, Gatsby Image and that's why I don't regret choosing a new technology that was completely new to me.",
@@ -82,18 +82,18 @@ const WorkValues = {
             technologies: ['JavaScript', 'Canvas', 'CSS', 'HTML']
         },
         {
-            githubLink: "https://github.com/jatanski/myFridge",
-            visitLink: null,
+            githubLink: "https://github.com/pz1996r/fridge2020",
+            visitLink: "https://fridge.develoopers.pl",
             title: "Fridge App",
             description: "This project is currently being improved and expanded. Fridge application is used to manage products and recipes. With this application you can indicate what you fancy, and it will suggest you what you should buy. ",
-            technologies: ['React', 'Node', 'Express', 'MongoDB']
+            technologies: ['React', 'Node', 'Express', 'MongoDB', 'Lambda-Functions']
         },
         {
-            githubLink: "https://www.douzupelnianeia.ed",
-            visitLink: "https://www.douzupelnianeia.ed",
+            githubLink: "https://github.com/pz1996r/Tetris",
+            visitLink: "https://tetris.develoopers.pl/",
             title: "Tetris",
-            description: "This project I created for a AI classes. The main goal is to find the shortest path through all points on the coordinate system.",
-            technologies: ['JavaScript', 'Canvas', 'CSS', 'HTML']
+            description: "Tetris game is well known, so it's not necessary to present it, but the main goal was to practice redux and hooks. During that project I have learned how to deal with clousure in React.",
+            technologies: ['React', 'Rredux', 'Hooks', 'styled-components']
         },
     ]
 }

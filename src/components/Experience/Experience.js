@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import React, { Children } from "react";
+import React from "react";
 import SectionTitle from "../SectionCommonComponents/SectionTitle";
 import SectionLi from "../SectionCommonComponents/SectionLi";
 import Section from "../SectionCommonComponents/SectionContainer";
@@ -131,11 +131,11 @@ class ExperienceComponent extends React.Component {
         this.state = {
             active: this.props.active,
             activeIndex: 0,
-            activePosition:0,
-            activeWidth:0,
+            activePosition: 0,
+            activeWidth: 0,
         };
     }
-    componentDidMount(){
+    componentDidMount() {
         const activeWidth = this.jobsChoices.current.childNodes[0].offsetWidth;
         // const positions = [...this.jobsChoices.current.childNodes].map((el)=>{prev += el.offsetWidth; return prev });
         this.setState({
@@ -143,15 +143,15 @@ class ExperienceComponent extends React.Component {
         });
     }
 
-    handleChange = (value, index,e) => {
+    handleChange = (value, index, e) => {
         const activeWidth = e.target.parentElement.offsetWidth;
-        const activePosition =  [...e.target.parentElement.parentElement.childNodes].reduce(function(previousValue, currentValue, i) {
+        const activePosition = [...e.target.parentElement.parentElement.childNodes].reduce(function (previousValue, currentValue, i) {
             return i < index ? previousValue + currentValue.offsetWidth : previousValue;
         }, 0);
         e.target.parentElement.parentElement.scrollTo({
             left: activePosition - 80,
             behavior: 'smooth'
-          });
+        });
 
         this.setState({
             active: value,
@@ -166,8 +166,8 @@ class ExperienceComponent extends React.Component {
             <Section id="Experience">
                 <SectionTitle beforeValue={this.props.title.nummber}>{this.props.title.value}</SectionTitle>
                 <JobsContainer>
-                    <JobsChoices activeBorder={this.state.activeIndex} activeWidth={this.state.activeWidth} activePosition = {this.state.activePosition} ref={this.jobsChoices}>
-                        {this.props.work.map((job, index) => <JobLi key={job.name}><JobBtn activeJob={this.state.active} jobName={job.name} onClick={(e)=>{this.handleChange(job.name, index, e)}}>{job.name}</JobBtn></JobLi>)}
+                    <JobsChoices activeBorder={this.state.activeIndex} activeWidth={this.state.activeWidth} activePosition={this.state.activePosition} ref={this.jobsChoices}>
+                        {this.props.work.map((job, index) => <JobLi key={job.name}><JobBtn activeJob={this.state.active} jobName={job.name} onClick={(e) => { this.handleChange(job.name, index, e) }}>{job.name}</JobBtn></JobLi>)}
                     </JobsChoices>
                     <ResponsiveDiv>
                         <JobPresentationContainer amount={this.props.work.length} activeIndex={this.state.activeIndex}>
