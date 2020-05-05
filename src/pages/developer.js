@@ -100,7 +100,7 @@ const WorkValues = {
 
 const ContactValues = {
     title: { value: "Get in touch", nummber: '04.' },
-    paragraf: "In spite of I've still improve my programming skills by my own, I woud like to start working under the guidance of more experienced developers. I'm ready to take up my first job or internship, so If you are looking for somebody like me click button below.  ",
+    paragraf: "I still develop my programing skills by my own, and I would like to boost that proces under the tutelage of more experienced developers on a comercial projects. I'm ready to take up my first job or internship, so if you are looking for somebody like me click the button below. ",
     button: { content: 'Get in Touch', href: "mailto:pz1996r@gmail.com" }
 }
 
@@ -179,7 +179,7 @@ class DeveloperPage extends React.Component {
                             })}
                         </MainHome>
                         <AboutComponent {...AboutValues} image={this.props.data}>
-                            <SectionP>Hello! my name is Piotr Zachoszcz and I'm a junior froned developer based in Wroclaw. I develop thinks that looks awesome and have useful funcionality. In free time I improve my programing skills, by creacting web application and unusuall websites like this portfolio whitch you are looking at.</SectionP>
+                            <SectionP>Hello! my name is Piotr Zachoszcz and I'm a junior froned developer based in Wroclaw. I develop things that looks awesome and have useful funcionality. In my free time I improve my programing skills, by creacting web application and unusuall websites like this portfolio whitch you are looking at.</SectionP>
                             <SectionP>Shortly after graduating from <SectionLink href="google">WSH</SectionLink> i join to the Coders Camp organized by <SectionLink href="https://coderscrew.pl/">Coders Crew</SectionLink> in order to improve my React and Node skills. In the meantime I began studies on <SectionLink href="https://pwr.edu.pl/">PWr</SectionLink>, because I'm curiose how to create mobile apps, and i would like to know more programing languages then JavaScript and PHP. I also care about foregin languages, thats why I attend to english classes at <SectionLink href="http://wsj.edu.pl/">WSJ</SectionLink>.</SectionP>
                             <SectionP>Here are a few technologies I have been working with recently: </SectionP>
                         </AboutComponent>
